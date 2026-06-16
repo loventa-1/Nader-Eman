@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Nader & Eman · Wedding Invitation</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ════════════════════════════════════════
+         PAGE 1 · LOADING SCREEN
+         ════════════════════════════════════════ -->
+    <section id="page-loading" class="page active">
+      <div class="loading-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="loading-content">
+        <div class="crest-wrapper">
+          <div class="crest-glow"></div>
+          <img
+            id="crest-img"
+            class="crest-img"
+            loading="lazy"
+            alt="Royal Crest"
+          />
+        </div>
+        <div class="loading-bar-wrap">
+          <div class="loading-bar" id="loading-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         PAGE 2 · DOOR SCENE
+         ════════════════════════════════════════ -->
+    <section id="page-door" class="page">
+      <div class="door-static-bg"></div>
+      <div class="door-bg-wrap">
+        <video
+          id="door-gif"
+          class="door-gif"
+          autoplay
+          muted
+          playsinline
+        ></video>
+        <div class="door-overlay" id="door-overlay"></div>
+        <div class="door-glow-ring" id="door-glow-ring"></div>
+      </div>
+      <div class="door-top-text">
+        <p class="door-pre en-text">Together with their families</p>
+        <p class="door-pre ar-text">بمشاركة عائلتيهما</p>
+        <p class="door-names-hero">
+          <span class="groom-name-en"></span>
+          <span class="amp-hero">&amp;</span>
+          <span class="bride-name-en"></span>
+        </p>
+        <p
+          class="door-names-hero ar-text"
+          style="font-family: &quot;Amiri&quot;, serif"
+        >
+          <span class="groom-name-ar"></span>
+          <span class="amp-hero">&amp;</span>
+          <span class="bride-name-ar"></span>
+        </p>
+        <p class="door-subtitle en-text">
+          invite you to open the door to their celebration
+        </p>
+        <p class="door-subtitle ar-text">يدعوانكم لفتح باب الاحتفال</p>
+      </div>
+      <button id="knock-btn" class="knock-btn" aria-label="Knock">
+        <span class="knock-emoji">🚪</span>
+        <span class="knock-label en-text">Knock</span>
+        <span class="knock-label ar-text">إطرق</span>
+      </button>
+      <div class="lang-toggle-wrap door-lang">
+        <button id="lang-btn-door" class="lang-btn">العربية / EN</button>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         PAGE 3 · WEDDING DETAILS + RSVP
+         ════════════════════════════════════════ -->
+    <section id="page-details" class="page">
+      <div class="details-bg"></div>
+      <div class="petals-wrap" id="petals"></div>
+
+      <div class="lang-toggle-wrap details-lang">
+        <button id="lang-btn-details" class="lang-btn">العربية / EN</button>
+      </div>
+
+      <!-- Music Control -->
+      <button
+        id="music-control-btn"
+        class="music-control-btn"
+        aria-label="Music Control"
+      >
+        <span class="music-icon">🔊</span>
+      </button>
+
+      <!-- Hero Section -->
+      <div class="details-hero">
+        <div class="hero-crest-mini">
+          <img id="hero-crest-img" alt="Crest" loading="lazy" class="logo" />
+        </div>
+        <p class="invite-pre en-text">
+          <br /><br /><br />Together with their families
+        </p>
+        <p class="invite-pre ar-text"><br /><br /><br />بمشاركة عائلتيهما</p>
+
+        <div class="hero-names">
+          <span class="name-left en-text groom-name-en"></span>
+          <span class="name-left ar-text groom-name-ar"></span>
+          <span class="ampersand">&amp;</span>
+          <span class="name-right en-text bride-name-en"></span>
+          <span class="name-right ar-text bride-name-ar"></span>
+        </div>
+
+        <!-- Couple Photo -->
+        <div class="couple-photo-wrapper">
+          <img
+            src="assets/images/couple.jpg"
+            alt="Mohanad & Tasnim"
+            class="couple-photo"
+            loading="lazy"
+          />
+        </div>
+
+        <p class="invite-body en-text">
+          invite you to the celebration of their wedding
+        </p>
+        <p class="invite-body ar-text">يدعوانكم للاحتفال حفل زفافهما</p>
+        <div class="ornament-line">
+          <span></span>
+          <div class="diamond-sm">◆</div>
+          <span></span>
+        </div>
+        <p class="hero-event en-text">Wedding Ceremony</p>
+        <p class="hero-event ar-text">حفل الزفاف</p>
+      </div>
+
+      <!-- Event Cards -->
+      <div class="details-cards">
+        <!-- Date Card -->
+        <div class="detail-card" style="--delay: 0.1s">
+          <h3 class="card-title">HAPPILY EVER BEGINS AFTER</h3>
+          <div class="card-label en-text">Date:</div>
+          <div class="card-label ar-text">التاريخ</div>
+          <div class="card-value en-text wedding-date-en"></div>
+          <div class="card-value ar-text wedding-date-ar"></div>
+
+          <!-- Countdown -->
+          <div class="countdown-container" id="countdown-container">
+            <div class="countdown-label en-text">Days until celebration</div>
+            <div class="countdown-label ar-text">الأيام المتبقية</div>
+            <div class="countdown-timer" id="countdown-timer">
+              <div class="time-block">
+                <div class="time-number" id="days">00</div>
+                <div class="time-unit en-text">Days</div>
+                <div class="time-unit ar-text">يوم</div>
+              </div>
+              <div class="time-block">
+                <div class="time-number" id="hours">00</div>
+                <div class="time-unit en-text">Hours</div>
+                <div class="time-unit ar-text">ساعة</div>
+              </div>
+              <div class="time-block">
+                <div class="time-number" id="minutes">00</div>
+                <div class="time-unit en-text">Minutes</div>
+                <div class="time-unit ar-text">دقيقة</div>
+              </div>
+              <div class="time-block">
+                <div class="time-number" id="seconds">00</div>
+                <div class="time-unit en-text">Seconds</div>
+                <div class="time-unit ar-text">ثانية</div>
+              </div>
+            </div>
+            <div class="countdown-message en-text" id="countdown-message"></div>
+            <div
+              class="countdown-message ar-text"
+              id="countdown-message-ar"
+            ></div>
+          </div>
+          <img
+            src="assets/images/counter.png"
+            alt="Decorative"
+            class="card-image"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Venue Card -->
+        <div class="detail-card" style="--delay: 0.3s">
+          <h3 class="card-title">LOCATION</h3>
+          <div class="card-label en-text">Venue</div>
+          <div class="card-label ar-text">المكان</div>
+          <div class="card-value en-text wedding-location-en"></div>
+          <div class="card-value ar-text wedding-location-ar"></div>
+          <br />
+          <div class="card-label en-text">Time</div>
+          <div class="card-label ar-text">الوقت</div>
+          <div class="card-value wedding-time"></div>
+          <br />
+          <img
+            src="assets/images/time-of-hall.png"
+            alt="Hall decoration"
+            class="card-image"
+            loading="lazy"
+          />
+          <br />
+          <a href="#" target="_blank" class="map-btn wedding-map-btn en-text"
+            >🗺 View Location</a
+          >
+          <a href="#" target="_blank" class="map-btn wedding-map-btn ar-text"
+            >🗺 عرض الموقع</a
+          >
+        </div>
+      </div>
+
+      <!-- RSVP Divider -->
+      <div class="section-divider">
+        <span></span>
+        <span class="div-text en-text">RSVP</span>
+        <span class="div-text ar-text">تأكيد الحضور</span>
+        <span></span>
+      </div>
+
+      <!-- RSVP Form -->
+      <div class="rsvp-wrap">
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="form-group">
+            <label class="en-text" for="rsvp-name">Full Name</label>
+            <label class="ar-text" for="rsvp-name">الاسم الكامل</label>
+            <input
+              type="text"
+              id="rsvp-name"
+              class="form-input"
+              placeholder="Your name..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="en-text">Attendance</label>
+            <label class="ar-text">الحضور</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="attend" value="yes" />
+                <span class="radio-custom"></span>
+                <span class="en-text">Yes, I'll be there 🥂</span>
+                <span class="ar-text">نعم، سأحضر 🥂</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="attend" value="no" />
+                <span class="radio-custom"></span>
+                <span class="en-text">Regretfully unable to attend</span>
+                <span class="ar-text">آسف، لن أتمكن من الحضور</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="en-text" for="rsvp-msg"
+              >Message <em>(optional)</em></label
+            >
+            <label class="ar-text" for="rsvp-msg"
+              >رسالة <em>(اختياري)</em></label
+            >
+            <textarea
+              id="rsvp-msg"
+              class="form-input"
+              rows="3"
+              placeholder="Your warm wishes..."
+            ></textarea>
+          </div>
+          <button type="submit" class="rsvp-submit">
+            <span class="en-text">✉ Send RSVP</span>
+            <span class="ar-text">✉ إرسال</span>
+          </button>
+        </form>
+
+        <div id="rsvp-success" class="rsvp-success hidden">
+          <div class="success-icon">💌</div>
+          <p class="en-text">
+            Thank you! Your response has been recorded.<br />Please confirm your
+            attendance via WhatsApp to both the groom and the bride:
+          </p>
+          <p class="ar-text">
+            شكراً لك! تم تسجيل ردك.<br />يرجى تأكيد الحضور عبر واتساب للعريس
+            والعروس:
+          </p>
+          <div class="whatsapp-buttons">
+            <button id="send-to-groom" class="whatsapp-btn groom-btn">
+              <span class="en-text">📱 Send to Groom</span>
+              <span class="ar-text">📱 إرسال للعريس</span>
+            </button>
+            <button id="send-to-bride" class="whatsapp-btn bride-btn">
+              <span class="en-text">📱 Send to Bride</span>
+              <span class="ar-text">📱 إرسال للعروس</span>
+            </button>
+            <button id="copy-message" class="whatsapp-btn copy-btn">
+              <span class="en-text">📋 Copy message</span>
+              <span class="ar-text">📋 نسخ الرسالة</span>
+            </button>
+          </div>
+          <p class="en-text small-note">
+            After sending to one, please return to this page and send to the
+            other.
+          </p>
+          <p class="ar-text small-note">
+            بعد الإرسال لأحدهما، ارجع إلى هذه الصفحة وأرسل للآخر.
+          </p>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════
+              FOOTER · SOCIAL MEDIA
+        ════════════════════════════════════════ -->
+      <footer class="footer-social">
+        <div class="ornament-line">
+          <span></span>
+          <div class="diamond-sm">◆</div>
+          <span></span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a
+            href="#"
+            class="social-link whatsapp"
+            id="social-whatsapp"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link phone"
+            id="social-phone"
+            target="_blank"
+            aria-label="Phone"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link tiktok"
+            id="social-tiktok"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.44 1.18-2.6 2.6-2.6.26 0 .51.04.74.12v-3.12a5.77 5.77 0 00-4.52 1.13 5.72 5.72 0 00-2.23 4.43 5.72 5.72 0 002.23 4.43 5.74 5.74 0 004.52 1.13 5.72 5.72 0 004.43-2.23 5.72 5.72 0 001.13-4.52V8.03c.76.54 1.68.87 2.66.87V5.82c-.78 0-1.54-.22-2.17-.67z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link instagram"
+            id="social-instagram"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link facebook"
+            id="social-facebook"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <span class="contact-item" id="contact-phone-display">
+            <span class="contact-label en-text">Phone</span>
+            <span class="contact-label ar-text">هاتف</span>
+            <span class="contact-value">+20 155 866 9681</span>
+          </span>
+          <span class="contact-divider">•</span>
+          <span class="contact-item" id="contact-email-display">
+            <span class="contact-label en-text">Email</span>
+            <span class="contact-label ar-text">بريد</span>
+            <span class="contact-value">info@example.com</span>
+          </span>
+        </div>
+
+        <!-- Credit -->
+        <p class="credit-text">
+          Designed with <span class="heart">♥</span> by
+          <span class="loventa">Loventa</span>
+        </p>
+      </footer>
+    </section>
+
+    <audio id="bg-music" loop preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
